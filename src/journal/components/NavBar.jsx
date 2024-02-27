@@ -1,8 +1,17 @@
-import { LogoutOutlined, MenuOutlined } from '@mui/icons-material'
+import {LogoutOutlined, MenuOutlined } from '@mui/icons-material'
 import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material'
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { startLogout } from '../../store/auth/thunks'
 
 export const NavBar = ({drawerWidth=240}) => {
+    
+    const dispatch=useDispatch();
+
+    const onLogout=()=>{
+        dispatch(startLogout())
+    }
+
   return (
   <>
     {/* NavBar automatico de material ui */}
@@ -17,7 +26,7 @@ export const NavBar = ({drawerWidth=240}) => {
             <IconButton
                 color='inherit'
                 edge='start'
-                // NT: El boton solamente aparece si es pequeno la pantalla
+                // NT: El boton solamente aparece si es pequeño la pantalla
                 sx={{mr:2, display:{sm: 'none'}}}
             >
                 <MenuOutlined/>
@@ -27,7 +36,7 @@ export const NavBar = ({drawerWidth=240}) => {
             container direction='row' justifyContent='space-between' alignItems='center'>
                 <Typography variant='h6' noWrap component='div'> JournalApp </Typography>
 
-                <IconButton color='error'>
+                <IconButton color='error' onClick={onLogout}>
                     <LogoutOutlined/>
                 </IconButton>
 
