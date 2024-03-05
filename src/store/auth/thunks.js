@@ -58,6 +58,7 @@ export const startLogout=()=>{
     return async(dispatch)=>{
 
         await (logoutFirebase);
+        console.log('se deslogueo');
         dispatch(clearNotesLogout());
         dispatch(logout(errorMessage));
     }

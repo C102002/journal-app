@@ -53,7 +53,7 @@ export const journalSlice = createSlice({
         },
         clearNotesLogout:(state)=>{
             state.isSaving=false;
-            state.active.messageSaved='';
+            state.messageSaved='';
             state.notes=[];
             state.active=null;
         },
