@@ -3,7 +3,7 @@ import { red } from "@mui/material/colors";
 
 createTheme
 
-export const purpleTheme=createTheme({
+export const darkTheme=createTheme({
 
     palette:{
         primary:{
@@ -13,10 +13,10 @@ export const purpleTheme=createTheme({
             main:'#543884'
         },
         thirdly:{
-            main:'#FFFFFF' //Blanco
+            main:'#000000' //Negro
         },
         forthdly:{
-            main:'#000000' //Negro
+            main:'#FFFFFF' //Blanco
         },
         error:{
             main:red.A400

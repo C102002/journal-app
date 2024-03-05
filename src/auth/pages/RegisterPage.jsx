@@ -7,9 +7,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { startCreatingUserWithEmailPassword } from '../../store/auth'
 
 const formData={
-  email:'alfredo@google.com',
-  password:'123456',
-  displayName:'Alfredo Fung'
+  // email:'alfredo@google.com',
+  // password:'123456',
+  // displayName:'Alfredo Fung'
+  email:'',
+  password:'',
+  displayName:''
 }
 
 //Es una tupla de la funcion a evaluar y el error

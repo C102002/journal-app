@@ -1,13 +1,16 @@
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
-import React from 'react'
-import { purpleTheme } from './purple'
+import React, { useContext, useMemo, useState } from 'react'
+import { purpleTheme,darkTheme } from './'
 
 export const AppTheme = ({children}) => {
+
+  const [theme, setTheme] = useState(purpleTheme)
+
   return (
-    <ThemeProvider theme={purpleTheme}>
-        <CssBaseline/>
-        {children}
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+          <CssBaseline/>
+          {children}
+      </ThemeProvider>
   )
 }

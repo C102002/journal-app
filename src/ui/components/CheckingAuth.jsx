@@ -24,7 +24,7 @@ export const CheckingAuth = () => {
             direction='row'
             justifyContent='center'
             >
-            <Typography color='common.white'> Loading </Typography>
+            <Typography color='thirdly.main'> Loading </Typography>
             </Grid>
 
         </Grid>

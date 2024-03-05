@@ -1,4 +1,5 @@
 import { loginWithEmailPassword, logoutFirebase, registerUserWithEmailPassword, sigInWithGoogle } from "../../firebase/providers";
+import { clearNotesLogout } from "../journal/journalSlice";
 import { checkingCredentials,logout,login } from "./authSlice"
 
 //NT: Thunks son tareas asincrona
@@ -57,6 +58,7 @@ export const startLogout=()=>{
     return async(dispatch)=>{
 
         await (logoutFirebase);
+        dispatch(clearNotesLogout());
         dispatch(logout(errorMessage));
     }
 }
