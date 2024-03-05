@@ -67,7 +67,7 @@ export const startSavingNotes=()=>{
 export const startUploadingFiles=(files=[])=>{
     return async(dispatch)=>{
         dispatch(setSaving());
-        console.log(files);
+        // console.log(files);
         // await fileUpload(files[0]);
         const fileUploadPromises=[];
 
@@ -77,7 +77,7 @@ export const startUploadingFiles=(files=[])=>{
 
         const photosUrls=await Promise.all(fileUploadPromises);
 
-        console.log(photosUrls);
+        // console.log(photosUrls);
         dispatch(setPhotosToActiveNote(photosUrls));
 
     }
